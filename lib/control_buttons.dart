@@ -14,11 +14,11 @@ class Forward_button extends StatelessWidget {
       holdTimeout: Duration(milliseconds: 50),
       enableHapticFeedback: true,
       onCancel: () {
-        stop_motors();
-        // print\("cancelled"\);
+        stop_motors(context);
+        print("cancelled");
       },
       onHold: () {
-        forward();
+        forward(context);
       },
       child: SizedBox(
         height: 80,
@@ -29,11 +29,11 @@ class Forward_button extends StatelessWidget {
             side: BorderSide(color: Colors.cyan, width: 2),
           ),
           onPressed: () {
-            forward();
+            forward(context);
             HapticFeedback.lightImpact();
           },
           onLongPress: () {
-            forward();
+            forward(context);
             HapticFeedback.lightImpact();
           },
           child: Text(
@@ -60,11 +60,11 @@ class Backward_button extends StatelessWidget {
       holdTimeout: Duration(milliseconds: 50),
       enableHapticFeedback: true,
       onCancel: () {
-        stop_motors();
+        stop_motors(context);
         // print\("cancelled"\);
       },
       onHold: () {
-        backward();
+        backward(context);
       },
       child: SizedBox(
         height: 80,
@@ -75,13 +75,13 @@ class Backward_button extends StatelessWidget {
             side: BorderSide(color: Colors.cyan, width: 2),
           ),
           onPressed: () {
-            backward();
+            backward(context);
             HapticFeedback.lightImpact();
           },
-          // onLongPress: () {
-          //   backward();
-          //   HapticFeedback.lightImpact();
-          // },
+          onLongPress: () {
+            backward(context);
+            HapticFeedback.lightImpact();
+          },
           child: Text(
             'Backward',
             style: TextStyle(
@@ -106,11 +106,11 @@ class Right_button extends StatelessWidget {
       holdTimeout: Duration(milliseconds: 50),
       enableHapticFeedback: true,
       onCancel: () {
-        stop_motors();
+        stop_motors(context);
         // print\("cancelled"\);
       },
       onHold: () {
-        right();
+        right(context);
       },
       child: SizedBox(
         height: 80,
@@ -121,11 +121,11 @@ class Right_button extends StatelessWidget {
             side: BorderSide(color: Colors.cyan, width: 2),
           ),
           onPressed: () {
-            right();
+            right(context);
             HapticFeedback.lightImpact();
           },
           onLongPress: () {
-            right();
+            right(context);
             HapticFeedback.lightImpact();
           },
           child: Text(
@@ -152,11 +152,11 @@ class Left_button extends StatelessWidget {
       holdTimeout: Duration(milliseconds: 50),
       enableHapticFeedback: true,
       onCancel: () {
-        stop_motors();
+        stop_motors(context);
         // print\("cancelled"\);
       },
       onHold: () {
-        left();
+        left(context);
       },
       child: SizedBox(
         height: 80,
@@ -167,7 +167,7 @@ class Left_button extends StatelessWidget {
             side: BorderSide(color: Colors.cyan, width: 2),
           ),
           onPressed: () {
-            left();
+            left(context);
             HapticFeedback.lightImpact();
           },
           onLongPress: () {
@@ -197,11 +197,11 @@ class Twist_Left_button extends StatelessWidget {
       holdTimeout: Duration(milliseconds: 50),
       enableHapticFeedback: true,
       onCancel: () {
-        stop_motors();
+        stop_motors(context);
         // print\("cancelled"\);
       },
       onHold: () {
-        twist_left();
+        twist_left(context);
       },
       child: SizedBox(
         height: 80,
@@ -212,7 +212,7 @@ class Twist_Left_button extends StatelessWidget {
             side: BorderSide(color: Colors.orangeAccent, width: 2),
           ),
           onPressed: () {
-            twist_left();
+            twist_left(context);
             HapticFeedback.lightImpact();
           },
           onLongPress: () {
@@ -240,11 +240,11 @@ class Twist_Right_button extends StatelessWidget {
       holdTimeout: Duration(milliseconds: 50),
       enableHapticFeedback: true,
       onCancel: () {
-        stop_motors();
+        stop_motors(context);
         // print\("cancelled"\);
       },
       onHold: () {
-        twist_right();
+        twist_right(context);
       },
       child: SizedBox(
         height: 80,
@@ -255,7 +255,7 @@ class Twist_Right_button extends StatelessWidget {
             side: BorderSide(color: Colors.orangeAccent, width: 2),
           ),
           onPressed: () {
-            twist_right();
+            twist_right(context);
             HapticFeedback.lightImpact();
           },
           onLongPress: () {
@@ -283,11 +283,11 @@ class Stop_button extends StatelessWidget {
       holdTimeout: Duration(milliseconds: 50),
       enableHapticFeedback: true,
       onCancel: () {
-        stop_motors();
+        stop_motors(context);
         //// print\("cancelled"\);
       },
       onHold: () {
-        stop_motors();
+        stop_motors(context);
       },
       child: SizedBox(
         height: 80,
@@ -298,7 +298,7 @@ class Stop_button extends StatelessWidget {
             side: BorderSide(color: Colors.red, width: 2),
           ),
           onPressed: () {
-            stop_motors();
+            stop_motors(context);
             HapticFeedback.lightImpact();
           },
           onLongPress: () {

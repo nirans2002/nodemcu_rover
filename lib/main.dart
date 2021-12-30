@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 
 Future<void> main() async {
   runApp(const MyApp());
-  init_data(base_url, port);
+  // get_data(context);
 }
 
 class MyApp extends StatelessWidget {
